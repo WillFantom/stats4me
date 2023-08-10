@@ -61,6 +61,11 @@ with a few basic input plugins (such as docker) and it outputs data to the
 `influxdb` instance at the initial bucket. For more about telegraf plugins and
 configuration, see [here](https://docs.influxdata.com/telegraf/v1.27/plugins).
 
+So Telegraf can collect data from the docker engine, it needs to be running in
+the docker group. For this, set the `DOCKER_GID` in the [.env](./.env) file to
+the value found for the docker group ID. This can be found by running `id` in
+the command line (provided your current user is in the docker group too).
+
 ### Grafana
 
 Grafana has very little configuration done by this repository... The default
