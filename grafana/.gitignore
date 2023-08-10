@@ -1,0 +1,5 @@
+alerting/
+csv/
+plugins/
+png/
+grafana.db
