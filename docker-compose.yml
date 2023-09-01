@@ -12,7 +12,7 @@ services:
     networks:
       - stats4me
     volumes:
-      - telegraf:/etc/telegraf
+      - telegraf:/etc/telegraf:ro
       - /var/run/docker.sock:/var/run/docker.sock
       - /:/hostfs:ro
     environment:
