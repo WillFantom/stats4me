@@ -1,4 +1,4 @@
-version: "3.9"
+name: stats4me
 
 services:
 
@@ -63,9 +63,8 @@ services:
     environment:
       - GF_INSTALL_PLUGINS=grafana-clock-panel,grafana-simple-json-datasource
 
-
 networks:
-  
+
   # local network for "internal" communication
   stats4me:
     driver: bridge
@@ -92,7 +91,7 @@ volumes:
       type: none
       device: ./influxdb-data
       o: bind
-    
+
   # stores the influxdb configuration
   influxdb-etc:
     driver: local
